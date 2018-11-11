@@ -17,13 +17,11 @@ for key in Response['google-me']:
     result1 = lista[0].text
     result2 = lista[1].text
     result3 = lista[2].text
-    print(result1)
-    print(result2)
-    print(result3)
-    places = [result1, result2, result3]
+
+    results = [result1, result2, result3]
 
     with open('resultados.txt', 'a') as filehandle:
-        for listitem in places:
+        for listitem in results:
             filehandle.write('%s\n' % listitem)
 
 f=open('resultados.txt')
@@ -51,7 +49,9 @@ data["Selenium python"].append({
     line[19]: line[20]
 })
 
-with open('biblioteca.json', 'w') as outfile:
+with open('output.json', 'w') as outfile:
     json.dump(data, outfile)
+
+print(data)
 
 driver.close()
