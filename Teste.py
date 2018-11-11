@@ -3,7 +3,6 @@ import json
 
 array = '{"google-me": ["Nextel", "Telefonia do futuro", "Selenium python"]}'
 Response = json.loads(array)
-print(Response)
 
 driver = webdriver.Chrome()
 
